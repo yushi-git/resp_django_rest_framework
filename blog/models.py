@@ -20,9 +20,11 @@ class Entry(models.Model):
         (STATUS_DRAFT, "下書き"),
         (STATUS_PUBLiC, "公開中"),
     )
-    title = models.CharField(max_length=128)
-    body = models.TextField()
+    # title = models.CharField(max_length=128)
+    body = models.TextField(max_length=256)
     created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    status = models.CharField(choices=STATUS_SET, default=STATUS_DRAFT, max_length=8)
+    # updated_at = models.DateTimeField(auto_now=True)
+    # status = models.CharField(choices=STATUS_SET, default=STATUS_DRAFT, max_length=8)
     author = models.ForeignKey(User, related_name='entries')
+    parent_id = models.IntegerField(default=0,null=True, blank=True)
+    score = models.IntegerField(default=0,null=True, blank=True)
