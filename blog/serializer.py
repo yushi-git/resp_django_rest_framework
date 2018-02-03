@@ -12,7 +12,7 @@ class UserSerializer(serializers.ModelSerializer):
 
 class EntrySerializer(serializers.ModelSerializer):
     # authorのserializerを上書き
-    author = UserSerializer()
+    # author = UserSerializer()
 
     class Meta:
         model = Entry

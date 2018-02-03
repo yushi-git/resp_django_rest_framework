@@ -25,6 +25,7 @@ class Entry(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     # updated_at = models.DateTimeField(auto_now=True)
     # status = models.CharField(choices=STATUS_SET, default=STATUS_DRAFT, max_length=8)
-    author = models.ForeignKey(User, related_name='entries')
+    # author = models.ForeignKey(User, related_name='entries')
+    author = models.TextField(max_length=128)
     parent_id = models.IntegerField(default=0,null=True, blank=True)
     score = models.IntegerField(default=0,null=True, blank=True)
