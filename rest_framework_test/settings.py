@@ -25,7 +25,7 @@ SECRET_KEY = '(fy%4=g1hf8#_yruc)#%j***0=7rkju_9&*@rfuz8lk!h#be(h'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ '10.0.2.2', 'localhost' ]
+ALLOWED_HOSTS = [ '10.0.2.2', 'localhost', '160.16.82.72' ]
 # for android test use. Should be erased later.
 
 # Application definition
